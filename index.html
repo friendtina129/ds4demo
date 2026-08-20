@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="用實作學會 HTML 的互動式入門教學。" />
+    <title>Markup Lab | HTML 入門工作室</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="logo" href="#top"><span class="logo-mark">&lt;/&gt;</span><span>MARKUP <b>LAB</b></span></a>
+      <div class="topbar-meta"><span class="status-dot"></span><span>學習模式 · 初階</span><button class="menu-button" id="menuButton" aria-label="開啟課程選單">選單</button></div>
+    </header>
+    <div class="layout" id="top">
+      <aside class="sidebar" id="sidebar">
+        <p class="sidebar-label">YOUR PATH / 01</p><h1>HTML<br /><em>入門課。</em></h1><p class="sidebar-intro">從標籤、結構到第一個可互動的頁面，循序建立你的網頁語感。</p>
+        <nav class="lesson-nav" aria-label="課程章節"><a class="lesson-link active" href="#start"><span>01</span><b>認識 HTML</b><i>目前課程</i></a><a class="lesson-link" href="#structure"><span>02</span><b>頁面結構</b><i>8 min</i></a><a class="lesson-link" href="#elements"><span>03</span><b>常用元素</b><i>12 min</i></a><a class="lesson-link" href="#practice"><span>04</span><b>動手練習</b><i>10 min</i></a></nav>
+        <div class="progress-box"><div class="progress-title"><span>課程進度</span><strong id="progressText">25%</strong></div><div class="progress-track"><span id="progressBar"></span></div><small>完成一個小測驗來更新進度</small></div>
+      </aside>
+      <main class="content">
+        <section class="lesson-hero" id="start"><div class="lesson-kicker"><span>LESSON 01</span><span>● 15 MIN READ</span></div><h2>HTML 是網頁的<br /><mark>骨架與語言。</mark></h2><p class="lead">HTML 全名是 HyperText Markup Language。它不是用來「畫」頁面的工具，而是用標籤告訴瀏覽器：這段文字是標題、那個區塊是一張圖片。</p><div class="tip"><span class="tip-icon">!</span><p><b>先記住一件事</b><br />HTML 負責內容與意義，CSS 負責外觀，JavaScript 負責互動。</p></div></section>
+        <section class="workbench" id="structure"><div class="section-line"><span>01 / SEE IT IN ACTION</span><span class="line"></span><span>LIVE PREVIEW</span></div><div class="workbench-grid"><div class="code-panel"><div class="panel-head"><span><i class="window-dot red"></i><i class="window-dot yellow"></i><i class="window-dot green"></i></span><span class="file-name">index.html</span><button class="copy-button" id="copyButton">複製程式碼</button></div><pre><code><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"zh-Hant"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Hello, web!<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>我的第一個網頁。<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre><div class="code-note"><span>⌘</span> 每份 HTML 文件都從 <b>DOCTYPE</b> 宣告開始。</div></div><div class="preview-panel"><div class="panel-head"><span class="preview-label">瀏覽器預覽</span><span class="preview-address">localhost / index.html</span></div><div class="preview-page"><div class="preview-browser-bar"><span></span><span></span><span></span></div><div class="preview-body"><div class="mini-logo">M</div><h3>Hello, web!</h3><p>我的第一個網頁。</p><button>開始探索</button></div></div></div></div></section>
+        <section class="concepts" id="elements"><div class="section-line"><span>02 / CORE CONCEPTS</span><span class="line"></span><span>BUILDING BLOCKS</span></div><div class="concept-grid"><article><span class="concept-number">A</span><h3>標籤 Tag</h3><p>用尖括號包住的關鍵字，描述內容的角色。大多數標籤都有開始與結束。</p><code>&lt;h1&gt;標題&lt;/h1&gt;</code></article><article><span class="concept-number">B</span><h3>元素 Element</h3><p>一組完整的開始標籤、內容與結束標籤，就是一個 HTML 元素。</p><code>&lt;p&gt;內容&lt;/p&gt;</code></article><article><span class="concept-number">C</span><h3>屬性 Attribute</h3><p>放在開始標籤裡的補充資訊，讓元素擁有更多設定或功能。</p><code>&lt;a href="..."&gt;</code></article></div></section>
+        <section class="practice" id="practice"><div><div class="section-line"><span>03 / QUICK CHECK</span><span class="line"></span></div><h2>換你試試看。</h2><p>哪一個標籤最適合用來放一段文章的主要標題？</p></div><div class="quiz-options"><button data-answer="wrong">&lt;title&gt;</button><button data-answer="correct">&lt;h1&gt;</button><button data-answer="wrong">&lt;header&gt;</button><p class="quiz-result" id="quizResult" aria-live="polite"></p></div></section>
+        <footer><span>MARKUP LAB / LEARN BY MAKING</span><a href="#top">回到頂端 ↑</a></footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
