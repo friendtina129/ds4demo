@@ -7,7 +7,12 @@ authors = [
     { name = "friendtina129", email = "64568115+friendtina129@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "html5lib>=1.1",
+    "lxml>=6.1.2",
+    "requests>=2.34.2",
+]
 
 [project.scripts]
 ds4demo = "ds4demo:main"
